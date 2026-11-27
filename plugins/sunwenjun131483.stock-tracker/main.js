@@ -235,7 +235,8 @@ function refresh(input) {
     const storage = input.storage || {};
 
     const items = buildItems(settings, storage, sources);
-    const quotes = {};
+    // 先沿用旧缓存：本轮离线或缺失的股票保留上次报价，有新报价再覆盖。
+    const quotes = { ...(storage.quotes || {}) };
     for (const item of items) {
         if (item.quote) {
             const { stale, ...saved } = item.quote;

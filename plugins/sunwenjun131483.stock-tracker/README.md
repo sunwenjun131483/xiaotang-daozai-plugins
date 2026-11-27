@@ -30,6 +30,9 @@
 ```powershell
 & daozai.exe --plugin-test ./plugin.json
 & daozai.exe --plugin-test ./plugin.json --input ./fixtures/mock.json
+& daozai.exe --plugin-test ./plugin.json --input ./fixtures/profit-off.json
+& daozai.exe --plugin-test ./plugin.json --input ./fixtures/empty-change.json
+& daozai.exe --plugin-test ./plugin.json --input ./fixtures/cached.json
 & daozai.exe --plugin-test ./plugin.json --input ./fixtures/offline.json
 ```
 
